@@ -1,0 +1,10 @@
+.tile {
+    justify-content: space-between;
+    flex: 0 0 var(--tile-width);
+    padding: var(--padding-small);
+}
+
+.tile--link {
+    color: red;
+    font-weight: var(--font-weight-500);
+}
