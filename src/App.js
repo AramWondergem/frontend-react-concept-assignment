@@ -10,7 +10,7 @@ function App() {
         <>
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
-                <Route exact path="/:subReddit" element={<Subreddit/>}></Route>
+                <Route exact path="/subreddit/:subReddit" element={<Subreddit/>}></Route>
                 <Route path="*" element={<NotFound/>}></Route>
             </Routes>
             <Footer/>
