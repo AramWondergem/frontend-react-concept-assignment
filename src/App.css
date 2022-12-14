@@ -1,4 +1,6 @@
-
+* {
+    border: black solid 2px;
+}
 /* ------------------import fonts-----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
@@ -40,9 +42,9 @@
     --background-footer: var(--color-dark);
     --background-header: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
 
-    --basic-screen-width: 1200px;
+    --basic-screen-width: 1000px;
     --gap: 10px;
-    --tile-width: 470px;
+    --tile-width: 300px;
 
 }
 
@@ -132,6 +134,7 @@ a:not([class]) {
 .outerbox {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .innerbox{

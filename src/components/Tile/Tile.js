@@ -2,17 +2,18 @@ import React from 'react';
 import "./tile.css"
 import {Link} from "react-router-dom";
 
-function Tile({link, title,src, subRedditName, commentsCount, votesUp}) {
+function Tile({title, subreddit, prefix, commentsCount, votesUp}) {
+    const linkSubreddit = `/${subreddit}`
     return (
-        <Link to={link}>
+
             <article className="tile flex-collumn">
-                <div><H3>{title}</H3></div>
+                <div><h3>{title}</h3></div>
                 <div className="flex-collumn">
-                    <a className="tile--link" href={src}>subRedditName</a>
-                    <p>`Comments ${commentsCount} - Ups ${votesUp}`</p>
+                    <Link className="tile--link" to={linkSubreddit}>{prefix}</Link>
+                    <p>{`Comments ${commentsCount} - Ups ${votesUp}`}</p>
                 </div>
             </article>
-        </Link>
+
     );
 }
 

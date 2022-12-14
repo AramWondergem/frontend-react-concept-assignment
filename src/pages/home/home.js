@@ -1,0 +1,56 @@
+import React, {useState} from 'react';
+import "./home.css"
+import Header from "../../components/header/Header";
+import redditHead from "../../assets/logo.png"
+import Tile from "../../components/Tile/Tile";
+import useFetch from "../../customHooks/useFetch";
+
+function Home(props) {
+    const [data, setData] = useState(undefined);
+    const [catchError, setCatchError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const url = "https://www.reddit.com/hot.json?limit=15";
+
+    useFetch(url, setData, setCatchError, setIsLoading)
+
+
+
+    return (
+        <>
+            <Header>
+                <img src={redditHead} alt="cartoon head of a alien, logo Reddit"/>
+                <h1>Reddit</h1>
+            </Header>
+            <main className="outerbox overview">
+                <div className="innerbox flex-collumn overview--innerbox">
+                    <div className="flex-collumn overview--titles">
+                        <h2>Hottest posts</h2>
+                        <h4>on Reddit right now</h4>
+                    </div>
+                    <div className="flex-wrap-row overview--tiles">
+                        {data &&
+                            data.data.children.map((object) => {
+
+                                const {title, subreddit_name_prefixed: prefix, subreddit, ups, num_comments} = object.data;
+console.log(object.data)
+                                return <Tile
+                                    key={title}
+                                    title={title}
+                                    subreddit={subreddit}
+                                    prefix={prefix}
+                                    commentsCount={num_comments}
+                                    votesUp={ups}/>
+
+
+                            })
+                        }
+                        {isLoading && <p>page is loading</p>}
+                        {catchError && <p>error</p>}
+                    </div>
+                </div>
+            </main>
+        </>
+    );
+}
+
+export default Home;
