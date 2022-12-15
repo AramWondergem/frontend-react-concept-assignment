@@ -5,6 +5,7 @@
 
 .header--innerbox {
     align-items: center;
+    padding: var(--padding-large) 0;
 
 }
 
@@ -26,6 +27,7 @@
     color: var(--color-white);
     text-transform: uppercase;
     text-decoration: none;
+    font-size: var(--fontsize-300);
 }
 
 .active-menu-link {
@@ -36,6 +38,22 @@
 
     border-bottom: none;
 }
+
+.header--children {
+    flex: 1 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+text-align: center;
+}
+
+
+.header--imagewrapper {
+    width: 150px;
+
+}
+
+
 
 
 

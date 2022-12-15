@@ -156,6 +156,7 @@ a:not([class]) {
 
 .innerbox{
     flex: 0 1 var(--basic-screen-width);
+    margin: 0 20px;
 }
 
 .flex-collumn {
@@ -187,7 +188,7 @@ body{
 
 h1,h2,h3,h4 {
     font-family: var(--font-headings);
-    font-weight: var(--font-weight-400);
+    font-weight: var(--font-weight-700);
     color: var(--color-dark);
 }
 
@@ -204,6 +205,11 @@ h3 {
 }
 
 h4 {
-    font-size: var(--fontsize-400);
+    font-size: var(--fontsize-300);
+}
+
+a, .Navlink, .Link {
+    font-family: var(--font-headings);
+    font-weight: var(--font-weight-700);
 }
 

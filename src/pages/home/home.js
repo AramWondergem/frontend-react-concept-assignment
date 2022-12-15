@@ -17,8 +17,7 @@ function Home(props) {
 
     return (
         <>
-            <Header>
-                <img src={redditHead} alt="cartoon head of a alien, logo Reddit"/>
+            <Header logo={redditHead}>
                 <h1>Reddit</h1>
             </Header>
             <main className="outerbox overview">
