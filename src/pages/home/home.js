@@ -14,7 +14,6 @@ function Home(props) {
     useFetch(url, setData, setCatchError, setIsLoading)
 
 
-
     return (
         <>
             <Header logo={redditHead}>
@@ -27,11 +26,17 @@ function Home(props) {
                         <h4>on Reddit right now</h4>
                     </div>
                     <div className="flex-wrap-row overview--tiles">
-                        {data &&
+                        {data && !catchError &&
                             data.data.children.map((object) => {
 
-                                const {title, subreddit_name_prefixed: prefix, subreddit, ups, num_comments} = object.data;
-console.log(object.data)
+                                const {
+                                    title,
+                                    subreddit_name_prefixed: prefix,
+                                    subreddit,
+                                    ups,
+                                    num_comments
+                                } = object.data;
+
                                 return <Tile
                                     key={title}
                                     title={title}
@@ -43,8 +48,8 @@ console.log(object.data)
 
                             })
                         }
-                        {isLoading && <p>page is loading</p>}
-                        {catchError && <p>error</p>}
+                        {isLoading && <p>Information is coming</p>}
+                        {catchError && <p>{catchError}</p>}
                     </div>
                 </div>
             </main>

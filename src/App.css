@@ -1,14 +1,10 @@
-* {
-    /*border: black solid 2px;*/
-}
+
 /* ------------------import fonts-----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 
 /*--------------custom properties_____________________ */
 #root {
-
-
 
     --font-headings: 'Quicksand', sans-serif;
     --font-body: 'Roboto Condensed', sans-serif;
@@ -54,7 +50,7 @@
 
 /*-------------CSS Reset-----------------*/
 /*
-filling page with main if the content does not fill the whole page
+filling page with maincomponent if the content does not fill the whole page
 */
 
 #root {

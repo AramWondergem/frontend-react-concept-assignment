@@ -3,6 +3,8 @@ import "./subreddit.css"
 import {Link, useParams} from "react-router-dom";
 import Header from "../../components/header/Header";
 import useFetch from "../../customHooks/useFetch";
+import stylingNumber from "../../helpers/stylingNumberFunction"
+
 
 
 function Subreddit(props) {
@@ -27,14 +29,14 @@ function Subreddit(props) {
                 <div className="innerbox subreddit--innerbox">
                     <div className="subreddit--information">
 
-                        {data &&
+                        {data && !catchError &&
                             <>
                                 <h3 className="subreddit--information--header">Title</h3>
                                 <p>{data.data.title}</p>
                                 <h3 className="subreddit--information--header">Description</h3>
                                 <p>{data.data.public_description}</p>
                                 <h3 className="subreddit--information--header">Number of subscribers</h3>
-                                <p>{data.data.subscribers}</p>
+                                <p>{stylingNumber(data.data.subscribers)}</p>
                             </>
 
                         }
@@ -42,7 +44,7 @@ function Subreddit(props) {
 
 
                         {isLoading && <p>page is loading</p>}
-                        {catchError && <p>error</p> }
+                        {catchError && <p>{catchError}</p> }
 
                     </div>
                     <div>
