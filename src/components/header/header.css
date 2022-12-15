@@ -1,11 +1,11 @@
 .header {
     background: var(--background-header);
-    min-height: 40vh;
+    min-height: 30vh;
 }
 
 .header--innerbox {
     align-items: center;
-    padding: var(--padding-large) 0;
+    padding-top: var(--padding-large);
 
 }
 
@@ -23,7 +23,7 @@
     gap: 20px;
 }
 
-.header--ul>* {
+.header--ul > * {
     color: var(--color-white);
     text-transform: uppercase;
     text-decoration: none;
@@ -40,11 +40,12 @@
 }
 
 .header--children {
+    margin: var(--padding-XXXL);
     flex: 1 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
-text-align: center;
+    text-align: center;
 }
 
 

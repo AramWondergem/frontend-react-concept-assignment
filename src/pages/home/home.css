@@ -1,0 +1,10 @@
+.overview {
+    background-color: var(--color-light-1);
+    padding-bottom: var(--padding-XXXL);
+}
+
+.overview--titles {
+    padding: var(--padding-XXXL);
+    text-align: center;
+}
+

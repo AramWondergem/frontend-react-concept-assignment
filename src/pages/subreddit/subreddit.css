@@ -1,0 +1,31 @@
+.subreddit{
+    padding: var(--padding-XXXL) 0;
+}
+
+.subreddit--innerbox {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: var(--padding-XXXL);
+}
+
+.subreddit--information--header {
+    padding: var(--padding-small) 0;
+
+}
+
+.subreddit--information p{
+    padding-bottom: var(--padding-small);
+}
+
+.subreddit--link {
+    color: var(--color-primary);
+
+}
+.subreddit--link-arrow {
+    font-size: var(--fontsize-600);
+    color: var(--color-primary);
+}
+
+
+

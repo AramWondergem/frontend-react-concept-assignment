@@ -3,7 +3,7 @@ import "./tile.css"
 import {Link} from "react-router-dom";
 
 function Tile({title, subreddit, prefix, commentsCount, votesUp}) {
-    const linkSubreddit = `/${subreddit}`
+    const linkSubreddit = `/subreddit/${subreddit}`
     return (
 
             <article className="tile flex-collumn">

@@ -29,11 +29,11 @@ function Subreddit(props) {
 
                         {data &&
                             <>
-                                <h3>Title</h3>
+                                <h3 className="subreddit--information--header">Title</h3>
                                 <p>{data.data.title}</p>
-                                <h3>Description</h3>
+                                <h3 className="subreddit--information--header">Description</h3>
                                 <p>{data.data.public_description}</p>
-                                <h3>Number of subscribers</h3>
+                                <h3 className="subreddit--information--header">Number of subscribers</h3>
                                 <p>{data.data.subscribers}</p>
                             </>
 
@@ -45,8 +45,9 @@ function Subreddit(props) {
                         {catchError && <p>error</p> }
 
                     </div>
-                    <div className="subreddit--link">
-                      <Link to="/">◁ Take me back</Link>
+                    <div>
+                        <span className="subreddit--link-arrow"> ‹ </span>
+                        <Link className="subreddit--link" to="/">Take me back</Link>
                     </div>
                 </div>
 
