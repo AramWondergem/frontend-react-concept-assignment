@@ -34,8 +34,11 @@ function Home(props) {
                                     subreddit_name_prefixed: prefix,
                                     subreddit,
                                     ups,
-                                    num_comments
+                                    num_comments,
+                                    permalink
                                 } = object.data;
+
+                                console.log(object.data)
 
                                 return <Tile
                                     key={title}
@@ -43,7 +46,8 @@ function Home(props) {
                                     subreddit={subreddit}
                                     prefix={prefix}
                                     commentsCount={num_comments}
-                                    votesUp={ups}/>
+                                    votesUp={ups}
+                                    permalink={permalink}/>
 
 
                             })

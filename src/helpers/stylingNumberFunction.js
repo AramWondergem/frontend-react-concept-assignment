@@ -1,4 +1,4 @@
-function stylingNumber(number){
+function stylingNumber(number) {
     return number.toLocaleString();
 }
 

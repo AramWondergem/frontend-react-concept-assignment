@@ -13,3 +13,7 @@
     color: red;
     font-weight: var(--font-weight-700);
 }
+
+.tile > a {
+    text-decoration: none;
+}

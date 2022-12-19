@@ -1,4 +1,4 @@
-.subreddit{
+.subreddit {
     padding: var(--padding-XXXL) 0;
 }
 
@@ -14,7 +14,7 @@
 
 }
 
-.subreddit--information p{
+.subreddit--information p {
     padding-bottom: var(--padding-small);
 }
 
@@ -22,6 +22,7 @@
     color: var(--color-primary);
 
 }
+
 .subreddit--link-arrow {
     font-size: var(--fontsize-600);
     color: var(--color-primary);

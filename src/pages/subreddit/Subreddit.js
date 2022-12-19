@@ -6,25 +6,24 @@ import useFetch from "../../customHooks/useFetch";
 import stylingNumber from "../../helpers/stylingNumberFunction"
 
 
-
 function Subreddit(props) {
-    const{subReddit} = useParams()
+    const {subReddit} = useParams()
     const [data, setData] = useState(undefined);
     const [catchError, setCatchError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [url, setUrl] = useState(`https://www.reddit.com/r/${subReddit}/about.json`);
 
-    useFetch( url, setData , setCatchError, setIsLoading);
+    useFetch(url, setData, setCatchError, setIsLoading);
 
     return (
         <>
             <Header>
                 {
-                   data && <h1>{data.data.display_name_prefixed}</h1>
+                    data && <h1>{data.data.display_name_prefixed}</h1>
                 }
                 {isLoading && <p>page is loading</p>}
-                {catchError && <p>error</p> }
-            <h4>Subreddit specifications</h4></Header>
+                {catchError && <p>error</p>}
+                <h4>Subreddit specifications</h4></Header>
             <main className="outerbox subreddit">
                 <div className="innerbox subreddit--innerbox">
                     <div className="subreddit--information">
@@ -42,9 +41,8 @@ function Subreddit(props) {
                         }
 
 
-
                         {isLoading && <p>page is loading</p>}
-                        {catchError && <p>{catchError}</p> }
+                        {catchError && <p>{catchError}</p>}
 
                     </div>
                     <div>
