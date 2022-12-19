@@ -1,0 +1,19 @@
+.tile {
+    justify-content: space-between;
+    flex: 1 0 var(--tile-width);
+    padding: var(--padding-large) var(--padding-medium);
+    background-color: white;
+    box-shadow: 3px 2px 8px grey;
+    border-radius: 3px;
+    gap: 20px;
+
+}
+
+.tile--link {
+    color: red;
+    font-weight: var(--font-weight-700);
+}
+
+.tile > a {
+    text-decoration: none;
+}
